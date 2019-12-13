@@ -1,0 +1,70 @@
+MainWindow
+  id: sagaMainWindow
+  height: 356
+  width: 345
+  !text: tr(" ")
+  color: #00476d
+  
+
+
+  Panel
+    id: panelGeral
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 376
+    width: 397
+    margin-left: -35
+    margin-top: -55
+    image-source: /images/Naruto/backgroundsaga
+  Panel
+    id: panelSaga3
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 67
+    width: 317
+    margin-left: 0
+    margin-top: 240
+    text: Loading...
+    color: #97b8f3
+    image-source: /images/Naruto/saga/rewardsaga
+  Panel
+    id: panelSaga2
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 123
+    width: 337
+    margin-left: -10
+    margin-top: 120
+    text: Loading...
+    color: #97b8f3
+    image-source: /images/Naruto/saga/whatdosaga
+  Panel
+    id: panelSaga1
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 123
+    width: 337
+    margin-left: -10
+    margin-top: 5
+    image-source: /images/Naruto/saga/loadingsaga
+  UIButton
+    id: fecharSagaButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 7
+    margin-top: 20
+    tooltip: Close
+    @onClick: onoffsaga()
+    $hover:
+      image-source: /images/Naruto/exit1
+  Label
+    id: lblTeste
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: SAGA
+    margin-left: 0
+    margin-top: -30
+    color: #ffaf05

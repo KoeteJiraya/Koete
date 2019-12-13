@@ -1,0 +1,14 @@
+Module
+  name: sensei
+  description: Pokedex de naruto
+  author: Koete
+  website: www.koete.com.br
+  version: 1.0
+  
+  autoload: true
+  autoload-priority: 1000
+  
+  
+  scripts: [ sensei ]
+  @onLoad: init()
+  @onUnload: terminate()

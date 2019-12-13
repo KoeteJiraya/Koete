@@ -1,0 +1,278 @@
+MainWindow
+  id: NDMiniWindow
+  height: 430
+  width: 350
+  !text: tr(" Characters ")
+  color: #fc4b4b
+  padding: 0 0 0 0
+  margin-left: 350
+  
+  UIButton
+    id: ButtonItemShop1
+    text-align: center       
+    size: 16 15	
+    image-source: /images/Naruto/shop/exit0
+    anchors.top: parent.top
+    anchors.right: parent.right   
+    tooltip: Exit
+    @onClick: modules.narutodex.onofftg()()
+    margin-top: 2
+    margin-right: 3
+    $hover:
+      image-source: /images/Naruto/shop/exit1
+  
+  ScrollablePanel
+    id: scrollablePainel
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: -35
+    margin-bottom: 5
+    size: 380 400
+    vertical-scrollbar: textScroll
+    padding: 0
+
+    UIButton
+      id: panelOut01
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 0
+      margin-top: 23
+      tooltip: To open this character you need done the quest "The Path of Sayuri".
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut02
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 65
+      margin-top: 23
+      tooltip: To open this character you need take the bell of kakashi in the saga missions.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut03
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 130
+      margin-top: 23
+      tooltip: To open this character you need defeat Rock Lee in a duel.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut04
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 195
+      margin-top: 23
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut05
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 260
+      margin-top: 23
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut06
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 0
+      margin-top: 148
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut07
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 65
+      margin-top: 148
+      tooltip: To open this character you need buy in yue shop.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut08
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 130
+      margin-top: 148
+      tooltip: To open this character you need defeat the Kimimaro in the saga mission.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut09
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 195
+      margin-top: 148
+      tooltip: To open this character you need buy it in the shop.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut10
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 260
+      margin-top: 148
+      tooltip: To open this character you need done the "Exam Chunnin".
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut11
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 0
+      margin-top: 273
+      tooltip: To open this character you need trade warzone coins with the npc.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut12
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 65
+      margin-top: 273
+      tooltip: To open this character you need collect every part of his puppet.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut13
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 130
+      margin-top: 273
+      tooltip: To open this character you need find the easter egg in the Exam Chunnin.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut14
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 195
+      margin-top: 273
+      tooltip: To open this character you need buy it in the shop.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut15
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 260
+      margin-top: 273
+      tooltip: To open this character you need buy it in guild shop.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut16
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 0
+      margin-top: 398
+      tooltip: To open this character you need defeat the "Wanted Kiba" in the bingo book.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut17
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 65
+      margin-top: 398
+      tooltip: To open this character you need defeat the "Wanted Chouji" in the bingo book.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut18
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 130
+      margin-top: 398
+      tooltip: To open this character you need defeat the "Wanted Tenten" in the bingo book.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut19
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 195
+      margin-top: 398
+      tooltip: To open this character you need defeat the "Wanted Shikamaru" in the bingo book.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut20
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 260
+      margin-top: 398
+      tooltip: To open this character you need defeat the "Wanted Shino" in the bingo book.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut21
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 0
+      margin-top: 523
+      tooltip: Unknown.
+      image-source: /images/Naruto/coletados/Out
+    UIButton
+      id: panelOut22
+      anchors.top: parent.top     
+      anchors.left: parent.left  
+      height: 123
+      width: 63
+      margin-left: 65
+      margin-top: 523
+      tooltip: Unknown.
+      image-source: /images/Naruto/coletados/Out
+    Button
+      id: onoffButtondx
+      !text: tr('X')
+      anchors.top: parent.top
+      anchors.right: parent.right
+      height: 23
+      width: 25
+      @onClick: onofftg()
+      tooltip: Close
+      margin-left: 260
+      margin-top: 0
+    Label
+      id: lblTeste
+      anchors.top: parent.top
+      anchors.left: parent.left
+      text-auto-resize: true
+      text: CHARACTERS
+      margin-left: 0
+      margin-top: -30
+      color: #ffaf05
+  VerticalScrollBar
+    id: textScroll
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 5
+    margin-right: 2
+    step: 16
+    height: 400

@@ -1,0 +1,490 @@
+VipPanelWindow < MainWindow
+  height: 403
+  width: 508
+  color: #efcc1c
+  image-source: /images/Naruto/VipPanel/TeleportBack
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 392
+    width: 508 
+
+  UIButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 15
+    margin-top: 31
+    tooltip: Close
+    @onClick: onoffvippanel()
+    $hover:
+      image-source: /images/Naruto/exit1
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 308
+    margin-top: 21
+    tooltip: Gold Colector
+    @onClick: selectgold()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 237
+    margin-top: 21
+    tooltip: Trainer
+    @onClick: selecttrainer()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 166
+    margin-top: 21
+    tooltip: Vip Status
+    @onClick: selectvip()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 18 27
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 208
+    margin-top: 192
+    @onClick: avacartppag()
+    $hover:
+      image-source: /images/Naruto/VipPanel/buttoninr
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 18 27
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 282
+    margin-top: 192
+    @onClick: voltartppag()
+    $hover:
+      image-source: /images/Naruto/VipPanel/buttoninl
+
+  Panel
+    id: PanelTpVip
+    image-source: /images/Naruto/VipPanel/TPKonoha
+    size: 118 117
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 195
+    margin-top: 60
+
+  UIButton
+    image-source: /images/Naruto/VipPanel/gout
+    size: 55 55
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 227
+    margin-top: 178
+    @onClick: gotpclient()
+    $hover:
+      image-source: /images/Naruto/VipPanel/goin
+
+  Label
+    size: 136 35
+    id: VilageName
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: KONOHA
+    text-align: center 
+    color: #ede177
+    margin-right: 340
+    margin-top: 77
+
+  Label
+    id: CountryName
+    size: 136 35
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: FIRE
+    text-align: center 
+    color: #ede177
+    margin-right: 26
+    margin-top: 203
+
+
+
+
+
+
+
+
+
+
+
+
+
+VipPanelWindow2 < MainWindow
+  height: 403
+  width: 508
+  color: #efcc1c
+  image-source: /images/Naruto/VipPanel/GoldBack
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 392
+    width: 508 
+
+  UIButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 15
+    margin-top: 31
+    tooltip: Close
+    @onClick: onoffvippanel()
+    $hover:
+      image-source: /images/Naruto/exit1
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 379
+    margin-top: 21
+    tooltip: Teleport
+    @onClick: selectteleport()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 237
+    margin-top: 21
+    tooltip: Trainer
+    @onClick: selecttrainer()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 166
+    margin-top: 21
+    tooltip: Vip Status
+    @onClick: selectvip()
+
+  UIButton
+    id:goldoff
+    image-source: /images/Naruto/VipPanel/poweroff
+    size: 128 128
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 19
+    margin-top: 87
+    tooltip: power on, to collect money.
+    @onClick: goldonoff()
+
+  UIButton
+    id: goldon
+    image-source: /images/Naruto/VipPanel/poweron
+    size: 128 128
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 19
+    margin-top: 87
+    tooltip: power off, to stop of collect money.
+    @onClick: goldonoff()
+
+
+
+
+
+
+
+
+
+
+
+
+
+VipPanelWindow3 < MainWindow
+  height: 403
+  width: 508
+  color: #efcc1c
+  image-source: /images/Naruto/VipPanel/TrainerBack
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 392
+    width: 508 
+
+  UIButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 15
+    margin-top: 31
+    tooltip: Close
+    @onClick: onoffvippanel()
+    $hover:
+      image-source: /images/Naruto/exit1
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 379
+    margin-top: 21
+    tooltip: Teleport
+    @onClick: selectteleport()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 308
+    margin-top: 21
+    tooltip: Gold Colector
+    @onClick: selectgold()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 166
+    margin-top: 21
+    tooltip: Vip Status
+    @onClick: selectvip()
+
+  UIButton
+    image-source: /images/Naruto/VipPanel/TrainerGoout
+    size: 66 70
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 45
+    margin-top: 172
+    tooltip: Go to trainer
+    @onClick: gotrain()
+    $hover:
+      image-source: /images/Naruto/VipPanel/TrainerGoin
+
+
+
+
+
+
+
+
+
+
+
+
+
+VipPanelWindow4 < MainWindow
+  height: 403
+  width: 508
+  color: #efcc1c
+  image-source: /images/Naruto/VipPanel/VipBack
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 392
+    width: 508 
+
+  UIButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 15
+    margin-top: 31
+    tooltip: Close
+    @onClick: onoffvippanel()
+    $hover:
+      image-source: /images/Naruto/exit1
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 379
+    margin-top: 21
+    tooltip: Teleport
+    @onClick: selectteleport()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 308
+    margin-top: 21
+    tooltip: Gold Colector
+    @onClick: selectgold()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 63 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 237
+    margin-top: 21
+    tooltip: Trainer
+    @onClick: selecttrainer()
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 61 60
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 45
+    margin-top: 172
+    tooltip: Vip days
+    @onClick: vipdaysv()
+    $hover:
+      image-source: /images/Naruto/VipPanel/buyin
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 61 60
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 222
+    margin-top: 172
+    tooltip: Donate
+    @onClick: donatev()
+    $hover:
+      image-source: /images/Naruto/VipPanel/buyin
+
+  UIButton
+    image-source: /images/Naruto/entergamezero
+    size: 61 60
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 400
+    margin-top: 172
+    tooltip: Buy Vip
+    @onClick: buyvipv()
+    $hover:
+      image-source: /images/Naruto/VipPanel/buyin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DonatePanel < MainWindow
+  image-source: /images/Naruto/entergamezero
+  height: 303
+  width: 105
+  color: #efcc1c
+  padding: 0 0 0 0
+  phantom: true
+  margin-right: 300
+  margin-top: -30
+
+  UIButton
+    id: 1coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (1) Koete Coin
+    @onClick: donate1()
+    margin-top: 10
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 5coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (5) Koete Coin
+    @onClick: donate5()
+    margin-top: 40
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 10coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (10) Koete Coin
+    @onClick: donate10()
+    margin-top: 70
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 20coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (20) Koete Coin
+    @onClick: donate20()
+    margin-top: 100
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 30coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (30) Koete Coin
+    @onClick: donate30()
+    margin-top: 130
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 50coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (50) Koete Coin
+    @onClick: donate50()
+    margin-top: 160
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+  UIButton
+    id: 100coin
+    image-source: /images/Naruto/koetecoinsout
+    size: 105 26
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text: (100) Koete Coin
+    @onClick: donate100()
+    margin-top: 190
+    $hover:
+      image-source: /images/Naruto/koetecoinsin

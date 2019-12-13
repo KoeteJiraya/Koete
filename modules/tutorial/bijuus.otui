@@ -1,0 +1,142 @@
+MainWindow
+  id: BijuuMainWindow
+  height: 450
+  width: 450
+  !text: tr(" ")
+  color: #fc4b4b
+  
+
+  Panel
+    id: panelBackgroundBijuus
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 460
+    width: 449
+    margin-left: -16
+    margin-top: -46
+    image-source: /images/Naruto/bijuus/bijuubackground
+  UIButton
+    id: buttonGoBijuus
+    image-source: /images/Naruto/bijuus/Go
+    size: 47 41
+    margin-left: 300
+    margin-top: 358
+    anchors.top: parent.top
+    anchors.left: parent.left
+    tooltip: Go
+    @onClick: goBijuuButton()
+    $hover:
+      image-source: /images/Naruto/bijuus/Go1
+  UIButton
+    id: buttonBackBijuus
+    image-source: /images/Naruto/bijuus/Back
+    size: 47 41
+    margin-left: 73
+    margin-top: 359
+    anchors.top: parent.top
+    anchors.left: parent.left
+    tooltip: Back
+    @onClick: backBijuuButton()
+    $hover:
+      image-source: /images/Naruto/bijuus/Back1
+  UIButton
+    id: onoffButtonBijuus
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    tooltip: Close
+    @onClick: onoffbijuu()
+    $hover:
+      image-source: /images/Naruto/exit1
+  Panel
+    id: panelBijuu
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 370
+    width: 370
+    margin-left: 20
+    margin-top: -15
+    image-source: /images/Naruto/bijuus/01
+  Label
+    id: lblTeste
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: BIJUUS
+    margin-left: 190
+    margin-top: -40
+    color: #ffaf05
+  Panel
+    id: panelBijuu2
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 41
+    width: 47
+    margin-left: 210
+    margin-top: 359
+    image-source: /images/Naruto/bijuus/pts0
+  Label
+    id: lblBijuuPts
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    margin-left: 229
+    margin-top: 373
+    color: #ffaf05
+  UIButton
+    id: buyChakraButton
+    image-source: /images/Naruto/bijuus/pts
+    size: 47 41
+    margin-left: 163
+    margin-top: 359
+    anchors.top: parent.top
+    anchors.left: parent.left
+    tooltip: Buy Chakra
+    @onClick: buyChakraPts()
+    $hover:
+      image-source: /images/Naruto/bijuus/pts1
+
+  UIButton
+    id: evolutionChakraBijuu1
+    size: 4 8
+    margin-left: 32
+    margin-top: 368
+    anchors.top: parent.top
+    anchors.left: parent.left
+  UIButton
+    id: evolutionChakraBijuu2
+    size: 4 8
+    margin-left: 37
+    margin-top: 368
+    anchors.top: parent.top
+    anchors.left: parent.left
+  UIButton
+    id: evolutionChakraBijuu3
+    size: 4 8
+    margin-left: 42
+    margin-top: 368
+    anchors.top: parent.top
+    anchors.left: parent.left
+  UIButton
+    id: evolutionChakraBijuu4
+    size: 4 8
+    margin-left: 47
+    margin-top: 368
+    anchors.top: parent.top
+    anchors.left: parent.left
+  UIButton
+    id: evolutionChakraBijuu5
+    size: 4 8
+    margin-left: 52
+    margin-top: 368
+    anchors.top: parent.top
+    anchors.left: parent.left
+  UIButton
+    id: evolutionChakraBijuu
+    image-source: /images/Naruto/bijuus/evolution0
+    size: 28 13
+    margin-left: 30
+    margin-top: 365
+    anchors.top: parent.top
+    anchors.left: parent.left

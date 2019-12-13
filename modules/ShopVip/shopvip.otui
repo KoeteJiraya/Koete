@@ -1,0 +1,2604 @@
+ShopNormalWindow < MainWindow
+  id: shopvipnormalwindow
+  height: 434
+  width: 660
+  color: #efcc1c
+  image-source: /images/Naruto/shop/back
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 434
+    width: 660 
+
+  UIButton
+    id: ButtonItemShop1
+    text-align: center       
+    size: 14 13	
+    image-source: /images/Naruto/shop/exit0	
+    anchors.top: parent.top
+    anchors.right: parent.right   
+    tooltip: Exit
+    @onClick: onoffshop123()
+    margin-top: 5
+    margin-right: 3
+    $hover:
+      image-source: /images/Naruto/shop/exit1
+
+  Label
+    id: ShoppingLabel
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text-align: center   
+    color: #9ff5a9
+    text: Yue Shop
+    size: 490 20
+    margin-right: 6
+    margin-top: 64
+  
+  ScrollablePanel
+    id: scrollablePainel
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 5
+    margin-bottom: 33
+    size: 490 312
+    background-color: #201f1f
+    vertical-scrollbar: textScroll
+    padding: 0
+
+    Panel
+      id: BackItemShop1
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chakra Buff
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/1
+    UIButton
+      id: ButtonItemShop1
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left   
+      color: #9ff5a9
+      text: 500
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop1()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop2
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left
+      size: 32 32
+      margin-top: 11
+      margin-left: 11
+      tooltip: Health Buff
+      image-source: /images/Naruto/shop/NormalShop/2
+    UIButton
+      id: ButtonItemShop2
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left   
+      color: #9ff5a9
+      text: 500
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop2()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop3
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 320
+    UIButton   
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left	
+      margin-top: 11
+      margin-left: 11
+      tooltip: Sky Parchment
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/3
+    UIButton
+      id: ButtonItemShop3
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left   
+      color: #9ff5a9
+      text: 1.500
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop3()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+
+    Panel
+      id: BackItemShop4
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Earth Parchment
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/4
+    UIButton
+      id: ButtonItemShop4
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left   
+      color: #9ff5a9
+      text:1.500
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop4()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop5
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 165
+    UIButton   
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left	
+      margin-top: 11
+      margin-left: 11
+      tooltip: Fur Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/5
+    UIButton
+      id: ButtonItemShop5
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left   
+      color: #9ff5a9
+      text: 10.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop5()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop6
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Camouflage Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/6
+    UIButton
+      id: ButtonItemShop6
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left   
+      color: #9ff5a9
+      text: 10.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop6()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+
+    Panel
+      id: BackItemShop7
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Moon Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/7
+    UIButton
+      id: ButtonItemShop7
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left   
+      color: #9ff5a9
+      text: 10.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop7()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop8
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Haku Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/8
+    UIButton
+      id: ButtonItemShop8
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left   
+      color: #9ff5a9
+      text: 50.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop8()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop9
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Zabuza Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/9
+    UIButton
+      id: ButtonItemShop9
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left   
+      color: #9ff5a9
+      text: 50.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop9()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+
+    Panel
+      id: BackItemShop10
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Juugo Character
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/10
+    UIButton
+      id: ButtonItemShop10
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left   
+      color: #9ff5a9
+      text: 350.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop10()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop11
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chunnin Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/11
+    UIButton
+      id: ButtonItemShop11
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left   
+      color: #9ff5a9
+      text: 500.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop11()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop12
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Koete Coin
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/12
+    UIButton
+      id: ButtonItemShop12
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left   
+      color: #9ff5a9
+      text: 5.000.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop12()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+    Panel
+      id: BackItemShop13
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 290
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop13.top
+      anchors.left: BackItemShop13.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Trainer Pass
+      size: 32 32
+      image-source: /images/Naruto/shop/NormalShop/13
+    UIButton
+      id: ButtonItemShop13
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/normalshopout	
+      anchors.top: BackItemShop13.top
+      anchors.left: BackItemShop13.left   
+      color: #9ff5a9
+      text: 100.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop37()
+      $hover:
+        image-source: /images/Naruto/shop/normalshopin
+
+
+
+  VerticalScrollBar
+    id: textScroll
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 33
+    margin-right: 5
+    step: 16
+    height: 312
+  UIButton
+    id: NormalShopButton
+    size: 155 75	
+    image-source: /images/Naruto/shop/3	
+    anchors.top: parent.top
+    anchors.left: parent.left 
+    margin-top: 130
+    margin-left: 0
+    @onClick: pageshop1()
+    $hover:
+      image-source: /images/Naruto/shop/3in
+  Label
+    id: NormalShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: NormalShopButton.top
+    anchors.left: NormalShopButton.left   
+    color: #9ff5a9
+    text: Yue
+    margin-top: 0
+    margin-left: 10
+  UIButton
+    id: GuildShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/2
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 210
+    margin-left: 0
+    @onClick: pageshop2()
+    $hover:
+      image-source: /images/Naruto/shop/2in
+  Label
+    id: GuildShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: GuildShopButton.top
+    anchors.left: GuildShopButton.left   
+    color: #7dbef0
+    text: Guild Point
+    margin-top: 0
+    margin-left: 20
+  UIButton
+    id: KoeteShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/1
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 290
+    margin-left: 0
+    @onClick: pageshop3()
+    $hover:
+      image-source: /images/Naruto/shop/1in
+  Label
+    id: KoeteShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: KoeteShopButton.top
+    anchors.left: KoeteShopButton.left   
+    color: #ede177
+    text: Koete Coin
+    margin-top: 0
+    margin-left: 20
+
+
+  Label
+    id: ShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #9ff5a9
+    text: Bank
+    margin-top: 40
+    margin-left: 5
+  Label
+    id: ShopValorLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #9ff5a9
+    text: 0
+    margin-top: 70
+    margin-left: 3
+
+
+
+
+
+
+
+
+
+
+
+
+ShopGuildWindow < MainWindow
+  id: shopvipguildwindow
+  height: 434
+  width: 660
+  color: #efcc1c
+  anchors.right: shopvipnormalwindow.right
+  anchors.left: shopvipnormalwindow.left
+  anchors.top: shopvipnormalwindow.top
+  anchors.bottom: shopvipnormalwindow.bottom
+  image-source: /images/Naruto/shop/back
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 434
+    width: 660 
+
+  UIButton
+    id: ButtonItemShop1
+    text-align: center       
+    size: 14 13	
+    image-source: /images/Naruto/shop/exit0	
+    anchors.top: parent.top
+    anchors.right: parent.right   
+    tooltip: Exit
+    @onClick: onoffshop123()
+    margin-top: 5
+    margin-right: 3
+    $hover:
+      image-source: /images/Naruto/shop/exit1
+
+  Label
+    id: ShoppingLabel
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text-align: center   
+    color: #7dbef0
+    text: Guild Point Shop
+    size: 490 20
+    margin-right: 6
+    margin-top: 64
+  
+  ScrollablePanel
+    id: scrollablePainel
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 5
+    margin-bottom: 33
+    size: 490 312
+    background-color: #201f1f
+    vertical-scrollbar: textScroll
+    padding: 0
+
+    Panel
+      id: BackItemShop1
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chakra and Health Buff
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/1
+    UIButton
+      id: ButtonItemShop1
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left   
+      color: #7dbef0
+      text: 100
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop13()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop2
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Blue Evil Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/2
+    UIButton
+      id: ButtonItemShop2
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left   
+      color: #7dbef0
+      text: 300
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop14()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop3
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Penguin Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/3
+    UIButton
+      id: ButtonItemShop3
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left   
+      color: #7dbef0
+      text: 300
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop15()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+
+    Panel
+      id: BackItemShop4
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chess Blue BackPack
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/4
+    UIButton
+      id: ButtonItemShop4
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left   
+      color: #7dbef0
+      text: 300
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop16()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop5
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Tsunade Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/5
+    UIButton
+      id: ButtonItemShop5
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left   
+      color: #7dbef0
+      text: 800
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop17()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop6
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Obito Character
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/6
+    UIButton
+      id: ButtonItemShop6
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left   
+      color: #7dbef0
+      text: 1.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop18()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+
+    Panel
+      id: BackItemShop7
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shisui Character
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/7
+    UIButton
+      id: ButtonItemShop7
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left   
+      color: #7dbef0
+      text: 1.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop19()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop8
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kage Pass
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/8
+    UIButton
+      id: ButtonItemShop8
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left   
+      color: #7dbef0
+      text: 5.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop20()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop9
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Akatsuki Ring
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/9
+    UIButton
+      id: ButtonItemShop9
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left   
+      color: #7dbef0
+      text: 5.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop21()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+
+    Panel
+      id: BackItemShop10
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shippuden Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/10
+    UIButton
+      id: ButtonItemShop10
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left   
+      color: #7dbef0
+      text: 10.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop22()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop11
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shukaku no Chakra
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/11
+    UIButton
+      id: ButtonItemShop11
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left   
+      color: #7dbef0
+      text: 50.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop23()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+    Panel
+      id: BackItemShop12
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Koete Coin
+      size: 32 32
+      image-source: /images/Naruto/shop/GuildShop/12
+    UIButton
+      id: ButtonItemShop12
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/guildshopout	
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left   
+      color: #7dbef0
+      text: 100.000
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop24()
+      $hover:
+        image-source: /images/Naruto/shop/guildshopin
+
+
+
+  VerticalScrollBar
+    id: textScroll
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 33
+    margin-right: 5
+    step: 16
+    height: 312
+  UIButton
+    id: NormalShopButton
+    size: 155 75	
+    image-source: /images/Naruto/shop/3	
+    anchors.top: parent.top
+    anchors.left: parent.left 
+    margin-top: 130
+    margin-left: 0
+    @onClick: pageshop1()
+    $hover:
+      image-source: /images/Naruto/shop/3in
+  Label
+    id: NormalShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: NormalShopButton.top
+    anchors.left: NormalShopButton.left   
+    color: #9ff5a9
+    text: Yue
+    margin-top: 0
+    margin-left: 10
+  UIButton
+    id: GuildShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/2
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 210
+    margin-left: 0
+    @onClick: pageshop2()
+    $hover:
+      image-source: /images/Naruto/shop/2in
+  Label
+    id: GuildShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: GuildShopButton.top
+    anchors.left: GuildShopButton.left   
+    color: #7dbef0
+    text: Guild Point
+    margin-top: 0
+    margin-left: 20
+  UIButton
+    id: KoeteShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/1
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 290
+    margin-left: 0
+    @onClick: pageshop3()
+    $hover:
+      image-source: /images/Naruto/shop/1in
+  Label
+    id: KoeteShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: KoeteShopButton.top
+    anchors.left: KoeteShopButton.left   
+    color: #ede177
+    text: Koete Coin
+    margin-top: 0
+    margin-left: 20
+
+
+  Label
+    id: ShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #7dbef0
+    text: Guild Points
+    margin-top: 40
+    margin-left: 5
+  Label
+    id: ShopValorLabelGuild
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #7dbef0
+    text: 0
+    margin-top: 70
+    margin-left: 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+ShopKoeteWindow < MainWindow
+  id: shopvipkoetewindow
+  height: 434
+  width: 660
+  color: #efcc1c
+  anchors.right: shopvipnormalwindow.right
+  anchors.left: shopvipnormalwindow.left
+  anchors.top: shopvipnormalwindow.top
+  anchors.bottom: shopvipnormalwindow.bottom
+  image-source: /images/Naruto/shop/back
+  padding: 0 0 0 0
+  phantom: true
+
+  UIButton
+    id: PanelBackInvisible  
+    height: 434
+    width: 660 
+
+  UIButton
+    id: ButtonItemShop1
+    text-align: center       
+    size: 14 13	
+    image-source: /images/Naruto/shop/exit0	
+    anchors.top: parent.top
+    anchors.right: parent.right   
+    tooltip: Exit
+    @onClick: onoffshop123()
+    margin-top: 5
+    margin-right: 3
+    $hover:
+      image-source: /images/Naruto/shop/exit1
+
+  Label
+    id: ShoppingLabel
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text-align: center   
+    color: #ede177
+    text: Koete Coin Shop
+    size: 490 20
+    margin-right: 6
+    margin-top: 64
+  
+  ScrollablePanel
+    id: scrollablePainel
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 5
+    margin-bottom: 33
+    size: 490 312
+    background-color: #201f1f
+    vertical-scrollbar: textScroll
+    padding: 0
+
+    Panel
+      id: BackItemShop1
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Ladybug Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/1
+    UIButton
+      id: ButtonItemShop1
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop1.top
+      anchors.left: BackItemShop1.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop25()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop2
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Hachibi Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/2
+    UIButton
+      id: ButtonItemShop2
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop2.top
+      anchors.left: BackItemShop2.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop26()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop3
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 10
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kingdon Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/3
+    UIButton
+      id: ButtonItemShop3
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop3.top
+      anchors.left: BackItemShop3.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop27()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+
+    Panel
+      id: BackItemShop4
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Lightning Backpack
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/4
+    UIButton
+      id: ButtonItemShop4
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop4.top
+      anchors.left: BackItemShop4.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop28()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop5
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Quarto Mizukage Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/5
+    UIButton
+      id: ButtonItemShop5
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop5.top
+      anchors.left: BackItemShop5.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop29()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop6
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 80
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Nidaime Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/6
+    UIButton
+      id: ButtonItemShop6
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop6.top
+      anchors.left: BackItemShop6.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop30()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+
+    Panel
+      id: BackItemShop7
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shodaime Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/7
+    UIButton
+      id: ButtonItemShop7
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop7.top
+      anchors.left: BackItemShop7.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop31()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop8
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Madara Doll
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/8
+    UIButton
+      id: ButtonItemShop8
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop8.top
+      anchors.left: BackItemShop8.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop32()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop9
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 150
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Itachi Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/9
+    UIButton
+      id: ButtonItemShop9
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop9.top
+      anchors.left: BackItemShop9.left   
+      color: #ede177
+      text: 15
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop33()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+
+    Panel
+      id: BackItemShop10
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Vacation Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/10
+    UIButton
+      id: ButtonItemShop10
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop10.top
+      anchors.left: BackItemShop10.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop34()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop11
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Worth Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/11
+    UIButton
+      id: ButtonItemShop11
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop11.top
+      anchors.left: BackItemShop11.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop35()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop12
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 220
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shukaku no Chakra
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/12
+    UIButton
+      id: ButtonItemShop12
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop12.top
+      anchors.left: BackItemShop12.left   
+      color: #ede177
+      text: 25
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop36()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop13
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 290
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop13.top
+      anchors.left: BackItemShop13.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Amaterasu Boots, +40 Chakra/s, speed +50.
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/13
+    UIButton
+      id: ButtonItemShop13
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop13.top
+      anchors.left: BackItemShop13.left   
+      color: #ede177
+      text: 30
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop38()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop14
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 290
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop14.top
+      anchors.left: BackItemShop14.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Gaara Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/14
+    UIButton
+      id: ButtonItemShop14
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop14.top
+      anchors.left: BackItemShop14.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop39()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop15
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 290
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop15.top
+      anchors.left: BackItemShop15.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kimimaro Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/15
+    UIButton
+      id: ButtonItemShop15
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop15.top
+      anchors.left: BackItemShop15.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop40()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop16
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 360
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop16.top
+      anchors.left: BackItemShop16.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kiba Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/16
+    UIButton
+      id: ButtonItemShop16
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop16.top
+      anchors.left: BackItemShop16.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop41()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop17
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 360
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop17.top
+      anchors.left: BackItemShop17.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chouji Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/17
+    UIButton
+      id: ButtonItemShop17
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop17.top
+      anchors.left: BackItemShop17.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop42()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop18
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 360
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop18.top
+      anchors.left: BackItemShop18.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Rock Lee Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/18
+    UIButton
+      id: ButtonItemShop18
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop18.top
+      anchors.left: BackItemShop18.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop43()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop19
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 430
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop19.top
+      anchors.left: BackItemShop19.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kakashi Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/19
+    UIButton
+      id: ButtonItemShop19
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop19.top
+      anchors.left: BackItemShop19.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop44()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop20
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 430
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop20.top
+      anchors.left: BackItemShop20.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Tenten Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/20
+    UIButton
+      id: ButtonItemShop20
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop20.top
+      anchors.left: BackItemShop20.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop45()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop21
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 430
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop21.top
+      anchors.left: BackItemShop21.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shikamaru Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/21
+    UIButton
+      id: ButtonItemShop21
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop21.top
+      anchors.left: BackItemShop21.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop46()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop22
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 500
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop22.top
+      anchors.left: BackItemShop22.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Hinata Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/22
+    UIButton
+      id: ButtonItemShop22
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop22.top
+      anchors.left: BackItemShop22.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop47()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop23
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 500
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop23.top
+      anchors.left: BackItemShop23.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shino Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/23
+    UIButton
+      id: ButtonItemShop23
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop23.top
+      anchors.left: BackItemShop23.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop48()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop24
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 500
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop24.top
+      anchors.left: BackItemShop24.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Neji Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/24
+    UIButton
+      id: ButtonItemShop24
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop24.top
+      anchors.left: BackItemShop24.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop49()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop25
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 570
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop25.top
+      anchors.left: BackItemShop25.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Juugo Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/25
+    UIButton
+      id: ButtonItemShop25
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop25.top
+      anchors.left: BackItemShop25.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop50()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop26
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 570
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop26.top
+      anchors.left: BackItemShop26.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Ino Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/26
+    UIButton
+      id: ButtonItemShop26
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop26.top
+      anchors.left: BackItemShop26.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop51()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop27
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 570
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop27.top
+      anchors.left: BackItemShop27.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Ultimate Protect Loot
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/27
+    UIButton
+      id: ButtonItemShop27
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop27.top
+      anchors.left: BackItemShop27.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop52()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop28
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 640
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop28.top
+      anchors.left: BackItemShop28.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Swim Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/28
+    UIButton
+      id: ButtonItemShop28
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop28.top
+      anchors.left: BackItemShop28.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop53()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop29
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 640
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop29.top
+      anchors.left: BackItemShop29.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Fantasy Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/29
+    UIButton
+      id: ButtonItemShop29
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop29.top
+      anchors.left: BackItemShop29.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop54()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop30
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 640
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop30.top
+      anchors.left: BackItemShop30.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Finder Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/30
+    UIButton
+      id: ButtonItemShop30
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop30.top
+      anchors.left: BackItemShop30.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop55()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop31
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 710
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop31.top
+      anchors.left: BackItemShop31.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shippuden Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/31
+    UIButton
+      id: ButtonItemShop31
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop31.top
+      anchors.left: BackItemShop31.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop56()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop32
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 710
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop32.top
+      anchors.left: BackItemShop32.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Chunnin Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/32
+    UIButton
+      id: ButtonItemShop32
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop32.top
+      anchors.left: BackItemShop32.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop57()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop33
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 710
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop33.top
+      anchors.left: BackItemShop33.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Assassin Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/33
+    UIButton
+      id: ButtonItemShop33
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop33.top
+      anchors.left: BackItemShop33.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop58()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop34
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 780
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop34.top
+      anchors.left: BackItemShop34.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Anbu Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/34
+    UIButton
+      id: ButtonItemShop34
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop34.top
+      anchors.left: BackItemShop34.left   
+      color: #ede177
+      text: 10
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop59()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop35
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 780
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop35.top
+      anchors.left: BackItemShop35.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Hebi Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/35
+    UIButton
+      id: ButtonItemShop35
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop35.top
+      anchors.left: BackItemShop35.left   
+      color: #ede177
+      text: 5
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop60()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop36
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 780
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop36.top
+      anchors.left: BackItemShop36.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Akatsuki Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/36
+    UIButton
+      id: ButtonItemShop36
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop36.top
+      anchors.left: BackItemShop36.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop61()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop37
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 850
+      margin-left: 10
+    UIButton    
+      anchors.top: BackItemShop37.top
+      anchors.left: BackItemShop37.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Kage Outfit
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/37
+    UIButton
+      id: ButtonItemShop37
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop37.top
+      anchors.left: BackItemShop37.left   
+      color: #ede177
+      text: 20
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop62()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop38
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 850
+      margin-left: 165
+    UIButton    
+      anchors.top: BackItemShop38.top
+      anchors.left: BackItemShop38.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Shisui Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/38
+    UIButton
+      id: ButtonItemShop38
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop38.top
+      anchors.left: BackItemShop38.left   
+      color: #ede177
+      text: 15
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop63()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+    Panel
+      id: BackItemShop39
+      size: 149 54
+      image-source: /images/Naruto/shop/backshop
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-right: 13
+      focusable: true
+      phantom: false
+      margin-top: 850
+      margin-left: 320
+    UIButton    
+      anchors.top: BackItemShop39.top
+      anchors.left: BackItemShop39.left
+      margin-top: 11
+      margin-left: 11
+      tooltip: Obito Character
+      size: 32 32
+      image-source: /images/Naruto/shop/KoeteShop/39
+    UIButton
+      id: ButtonItemShop39
+      text-align: center       
+      size: 77 18	
+      image-source: /images/Naruto/shop/koeteshopout	
+      anchors.top: BackItemShop39.top
+      anchors.left: BackItemShop39.left   
+      color: #ede177
+      text: 15
+      margin-top: 42
+      margin-left: 66
+      @onClick: shop64()
+      $hover:
+        image-source: /images/Naruto/shop/koeteshopin
+
+
+
+  VerticalScrollBar
+    id: textScroll
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 33
+    margin-right: 5
+    step: 16
+    height: 312
+  UIButton
+    id: NormalShopButton
+    size: 155 75	
+    image-source: /images/Naruto/shop/3	
+    anchors.top: parent.top
+    anchors.left: parent.left 
+    margin-top: 130
+    margin-left: 0
+    @onClick: pageshop1()
+    $hover:
+      image-source: /images/Naruto/shop/3in
+  Label
+    id: NormalShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: NormalShopButton.top
+    anchors.left: NormalShopButton.left   
+    color: #9ff5a9
+    text: Yue
+    margin-top: 0
+    margin-left: 10
+  UIButton
+    id: GuildShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/2
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 210
+    margin-left: 0
+    @onClick: pageshop2()
+    $hover:
+      image-source: /images/Naruto/shop/2in
+  Label
+    id: GuildShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: GuildShopButton.top
+    anchors.left: GuildShopButton.left   
+    color: #7dbef0
+    text: Guild Point
+    margin-top: 0
+    margin-left: 20
+  UIButton
+    id: KoeteShopButton
+    text-align: center       
+    size: 155 75	
+    image-source: /images/Naruto/shop/1
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #0b91a3
+    margin-top: 290
+    margin-left: 0
+    @onClick: pageshop3()
+    $hover:
+      image-source: /images/Naruto/shop/1in
+  Label
+    id: KoeteShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: KoeteShopButton.top
+    anchors.left: KoeteShopButton.left   
+    color: #ede177
+    text: Koete Coin
+    margin-top: 0
+    margin-left: 20
+
+
+  Label
+    id: ShopLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #ede177
+    text: Koete Coins
+    margin-top: 40
+    margin-left: 5
+  Label
+    id: ShopValorLabel
+    size: 155 75	
+    text-align: center     
+    anchors.top: parent.top
+    anchors.left: parent.left   
+    color: #ede177
+    text: Unknown
+    margin-top: 70
+    margin-left: 3

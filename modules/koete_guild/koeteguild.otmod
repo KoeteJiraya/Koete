@@ -1,0 +1,15 @@
+Module
+  name: guild
+  description: Um modulo de teste
+  author: Koete
+  website: www.koete.com.br
+  version: 1.0
+
+  sandboxed: true
+  autoload: true
+  autoload-priority: 1000
+
+  scripts: [ koeteguild ]
+
+  @onLoad: init()
+  @onUnload: terminate()

@@ -1,0 +1,134 @@
+InventoryItem < Item
+
+HeadSlot < InventoryItem
+  id: slot1
+  image-source: /images/game/slots/head
+  &position: {x=65535, y=1, z=0}
+
+BodySlot < InventoryItem
+  id: slot4
+  image-source: /images/game/slots/body
+  &position: {x=65535, y=4, z=0}
+
+LegSlot < InventoryItem
+  id: slot7
+  image-source: /images/game/slots/legs
+  &position: {x=65535, y=7, z=0}
+
+FeetSlot < InventoryItem
+  id: slot8
+  image-source: /images/game/slots/feet
+  &position: {x=65535, y=8, z=0}
+
+NeckSlot < InventoryItem
+  id: slot2
+  image-source: /images/game/slots/neck
+  &position: {x=65535, y=2, z=0}
+
+LeftSlot < InventoryItem
+  id: slot6
+  image-source: /images/game/slots/left-hand
+  &position: {x=65535, y=6, z=0}
+
+FingerSlot < InventoryItem
+  id: slot9
+  image-source: /images/game/slots/finger
+  &position: {x=65535, y=9, z=0}
+
+BackSlot < InventoryItem
+  id: slot3
+  image-source: /images/game/slots/back
+  &position: {x=65535, y=3, z=0}
+
+RightSlot < InventoryItem
+  id: slot5
+  image-source: /images/game/slots/right-hand
+  &position: {x=65535, y=5, z=0}
+
+AmmoSlot < InventoryItem
+  id: slot10
+  image-source: /images/game/slots/ammo
+  &position: {x=65535, y=10, z=0}
+
+PurseButton < Button
+  id: purseButton
+  size: 26 26
+  !tooltip: tr('Open purse')
+  icon-source: /images/game/slots/purse
+  icon-size: 24 24
+  icon-offset: 1 1
+
+MiniWindow
+  id: inventoryWindow
+  !text: tr('Inventory')
+  icon: /images/topbuttons/inventory
+  image-source: /images/inventory/ANBU_INV.png
+  height: 380
+  @onClose: modules.game_inventory.onMiniWindowClose()
+  &save: true
+
+  MiniWindowContents
+    HeadSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 27
+      margin-left: 130
+
+    BodySlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 86
+      margin-left: 147
+
+    LegSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 246
+      margin-left: 121
+
+    FeetSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 300
+      margin-left: 70
+
+    NeckSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 12
+      margin-left: 39
+
+    LeftSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 168
+      margin-left: 1
+
+    FingerSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 196
+      margin-left: 129
+
+    BackSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 58
+      margin-left: 19
+
+    RightSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 138
+      margin-left: 144
+
+    AmmoSlot
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 223
+      margin-left: 15
+
+    PurseButton
+      margin-top: 3
+      anchors.top: parent.top
+      anchors.left: parent.left

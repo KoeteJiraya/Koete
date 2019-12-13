@@ -1,0 +1,208 @@
+MainWindow
+  id: achievementsMainWindow 
+  height: 441
+  width: 264
+  !text: tr(" ")
+  color: #fc4b4b
+  image-source: /images/Naruto/Achievements/backgroundachievements
+
+  
+  Label
+    id: lblTeste
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: ACHIEVEMENTS
+    margin-left: 72
+    margin-top: -30
+    color: #ffaf05
+  UIButton
+    id: onoffButtonAchievements
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    tooltip: Close
+    @onClick: onoffachievements()
+    $hover:
+      image-source: /images/Naruto/exit1
+  UIButton
+    id: button01
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 40
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/01
+  UIButton
+    id: button02
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 40
+    tooltip: King of Game: Receive +5% exp.
+    image-source: /images/Naruto/achievements/out/02
+  UIButton
+    id: button03
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 130
+    margin-top: 40
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/03
+  UIButton
+    id: button04
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 190
+    margin-top: 40
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/04
+  UIButton
+    id: button05
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 110
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/05
+  UIButton
+    id: button06
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 110
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/06
+  UIButton
+    id: button07
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 130
+    margin-top: 110
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/07
+  UIButton
+    id: button08
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 190
+    margin-top: 110
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/08
+  UIButton
+    id: button09
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 180
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/09
+  UIButton
+    id: button10
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 180
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/10
+  UIButton
+    id: button11
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 130
+    margin-top: 180
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/11
+  UIButton
+    id: button12
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 190
+    margin-top: 180
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/12
+  UIButton
+    id: button13
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 250
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/13
+  UIButton
+    id: button14
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 250
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/14
+  UIButton
+    id: button15
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 130
+    margin-top: 250
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/15
+  UIButton
+    id: button16
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 190
+    margin-top: 250
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/16
+  UIButton
+    id: button17
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 320
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/17
+  UIButton
+    id: button18
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 320
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/18
+  UIButton
+    id: button19
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 130
+    margin-top: 320
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/19
+  UIButton
+    id: button20
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 190
+    margin-top: 320
+    tooltip: Unknow
+    image-source: /images/Naruto/achievements/out/20

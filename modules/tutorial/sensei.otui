@@ -1,0 +1,222 @@
+MainWindow
+  id: senseiMainWindow 
+  height: 357
+  width: 265
+  !text: tr("")
+  color: #fc4b4b
+  padding: 0 0 0 0
+  margin-right: 300
+  image-source: /images/Naruto/sensei/backgroundsensei
+
+
+
+
+  Label
+    id: TextSensei
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text-align: center   
+    color: white
+    text: nobody
+    size: 248 20
+    margin-right: 6
+    margin-top: 39
+  Label
+    id: TextPupil
+    anchors.top: parent.top
+    anchors.right: parent.right
+    text-align: center   
+    color: white
+    text: nobody
+    size: 248 20
+    margin-right: 6
+    margin-top: 79
+
+
+
+
+
+  
+  Label
+    id: lblSensei
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Sensei
+    margin-left: 114
+    margin-top: 26
+    color: #ffaf05
+  Label
+    id: lblPupil
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Pupil
+    margin-left: 118
+    margin-top: 66
+    color: #ffaf05
+  UIButton
+    id: onoffButtonsensei
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 5
+    margin-top: 5
+    tooltip: Close
+    @onClick: onoffsensei()
+    $hover:
+      image-source: /images/Naruto/exit1
+
+
+  UIButton
+    id: stage1
+    size: 46 16
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 65
+    margin-bottom: 230
+  UIButton
+    id: stage2
+    size: 46 16
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 65
+    margin-bottom: 182
+  UIButton
+    id: stage3
+    size: 46 16
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 65
+    margin-bottom: 134
+  UIButton
+    id: stage4
+    size: 46 16
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 65
+    margin-bottom: 86
+
+
+
+
+
+
+  UIButton
+    id: button1
+    image-source: /images/Naruto/senseibuttonout
+    size: 83 22
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 143
+    margin-bottom: 227
+    @onClick: doSkillBuff()
+    tooltip: Reward: every skill of attack will up x3 more fast for 30 minutes.
+    $hover:
+      image-source: /images/Naruto/senseibuttonin
+  UIButton
+    id: button2
+    image-source: /images/Naruto/senseibuttonout
+    size: 83 22
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 143
+    margin-bottom: 182
+    @onClick: doSpeedBuff()
+    tooltip: Reward: be more fast for 1 hour and immune of any kind of slowly.
+    $hover:
+      image-source: /images/Naruto/senseibuttonin
+  UIButton
+    id: button3
+    image-source: /images/Naruto/senseibuttonout
+    size: 83 22
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 143
+    margin-bottom: 134
+    @onClick: doChakraBuff()
+    tooltip: Reward: regens your chakra in every 6 seconds by 1 hour.
+    $hover:
+      image-source: /images/Naruto/senseibuttonin
+  UIButton
+    id: button4
+    image-source: /images/Naruto/senseibuttonout
+    size: 83 22
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 143
+    margin-bottom: 86
+    @onClick: doHealthBuff()
+    tooltip: Reward: regens your health in every 6 seconds by 1 hour.
+    $hover:
+      image-source: /images/Naruto/senseibuttonin
+
+
+
+
+
+  UIButton
+    id: exp1
+    image-source: /images/Naruto/sensei/exp1
+    size: 11 11
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 10%
+  UIButton
+    id: exp2
+    image-source: /images/Naruto/sensei/exp2
+    size: 20 12
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 25%
+  UIButton
+    id: exp3
+    image-source: /images/Naruto/sensei/exp3
+    size: 32 12
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 35%
+  UIButton
+    id: exp4
+    image-source: /images/Naruto/sensei/exp4
+    size: 56 12
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 45%
+  UIButton
+    id: exp5
+    image-source: /images/Naruto/sensei/exp5
+    size: 78 11
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 65%
+  UIButton
+    id: exp6
+    image-source: /images/Naruto/sensei/exp6
+    size: 91 12
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 75
+    margin-bottom: 29
+    tooltip: 85%
+  UIButton
+    id: exp7
+    image-source: /images/Naruto/sensei/exp7
+    size: 127 38
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 64
+    margin-bottom: 15
+    tooltip: Click to take your exp
+    @onClick: doExpBuff()

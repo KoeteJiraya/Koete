@@ -1,0 +1,959 @@
+MainWindowSample < MainWindow
+  id: koeteguildwindow
+  height: 257
+  width: 266
+  !text: tr("Guild")
+  color: #efcc1c
+  focusable: true
+  visible: false
+  image-source: /images/Naruto/koeteguild/back
+  UIButton
+    id: LabelGuildPoints
+    text-align: center       
+    size: 89 34	
+    image-source: /images/Naruto/koeteguild/GuildStatus	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    color: #0b91a3
+    tooltip: Your Guild Points
+    margin-bottom: 80
+    margin-left: 73
+  UIButton
+    id: LabelGuildMoney
+    text-align: center       
+    size: 89 34	
+    image-source: /images/Naruto/koeteguild/GuildStatus	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    color: #0ec934
+    tooltip: Guild Total Money
+    margin-bottom: 40
+    margin-left: 73
+  UIButton
+    id: LabelGuildPower
+    text-align: center       
+    size: 89 34	
+    image-source: /images/Naruto/koeteguild/GuildStatus	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    color: #efcc1c
+    tooltip: Guild Power
+    margin-bottom: 0
+    margin-left: 73
+  UIButton
+    id: koeteCreateGuild
+    size: 101 17
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 67
+    margin-top: 81
+    @onClick: createGuildKoeteButton()
+    image-source: /images/Naruto/koeteguild/okout
+    $hover:
+      image-source: /images/Naruto/koeteguild/okin
+  TextEdit
+    id: textEditCreateGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: #efcc1c
+    image-source: /images/Naruto/koeteguild/nameguild
+    size: 171 26
+    margin-top: 55
+    margin-left: 33
+
+  UIButton
+    id: koeteJoinGuild
+    size: 101 17
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 67
+    margin-top: 181
+    @onClick: joinGuildKoeteButton()
+    image-source: /images/Naruto/koeteguild/joinokout
+    $hover:
+      image-source: /images/Naruto/koeteguild/joinokin
+
+  UIButton
+    id: koeteMemberGuild
+    size: 26 27
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 3
+    margin-top: 20
+    tooltip: Members
+    @onClick: getMemberKoeteButton()
+    image-source: /images/Naruto/koeteguild/MemberOut
+    $hover:
+      image-source: /images/Naruto/koeteguild/MemberIn
+
+  UIButton
+    id: iventoryItensKoeteGuild
+    size: 26 27
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 3
+    margin-top: 140
+    tooltip: Inventory
+    @onClick: showIventorySlot()
+    image-source: /images/Naruto/koeteguild/iventoryout
+    $hover:
+      image-source: /images/Naruto/koeteguild/iventoryin
+
+  UIButton
+    id: koeteRankGuild
+    size: 28 48
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 5
+    margin-top: 75
+    tooltip: Guild Rank
+    @onClick: getRankKoeteButton()
+    image-source: /images/Naruto/koeteguild/RankOut
+    $hover:
+      image-source: /images/Naruto/koeteguild/RankIn
+
+  UIButton
+    id: limitGuild
+    size: 40 40
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 0
+    margin-top: 140
+    tooltip: Limit of players from your Guild
+    @onClick: showGuildLimit()
+    image-source: /images/Naruto/koeteguild/limitout
+    $hover:
+      image-source: /images/Naruto/koeteguild/limitin
+
+  UIButton
+    id: koeteStaminaGuild
+    size: 32 23
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 105
+    tooltip: Stamina
+    @onClick: staminaGuildButton()
+    image-source: /images/Naruto/koeteguild/Staminaout
+    $hover:
+      image-source: /images/Naruto/koeteguild/Staminain
+
+  UIButton
+    id: koeteManageGuild
+    size: 31 31
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 5
+    margin-top: 20
+    tooltip: Manage
+    @onClick: showGuildManagement()
+    image-source: /images/Naruto/koeteguild/ManageOut
+    $hover:
+      image-source: /images/Naruto/koeteguild/ManageIn
+
+  TextEdit
+    id: textEditJoinGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: #1cacef
+    image-source: /images/Naruto/koeteguild/joinnameguild
+    size: 171 26
+    margin-top: 155
+    margin-left: 33
+
+  UIButton
+    id: koetePositionGuild
+    size: 54 45
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left:90
+    margin-top: 20
+
+  UIButton
+    id: koeteDonateGuild
+    size: 24 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 6
+    margin-top: 60
+    tooltip: Donate
+    @onClick: showKoeteDonateGuild()
+    image-source: /images/Naruto/koeteguild/guildDonateout
+    $hover:
+      image-source: /images/Naruto/koeteguild/guildDonatein
+
+ButtonSample < MainWindow
+  id: countWindow
+  !text: tr('Want donate how much?')
+  size: 266 257
+  anchors.right: koeteguildwindow.right
+  anchors.left: koeteguildwindow.left
+  anchors.top: koeteguildwindow.top
+  anchors.bottom: koeteguildwindow.bottom
+  margin-top: 257
+  margin-bottom: -120
+  phantom: true
+
+  UIButton
+    id: koeteGuildButtonDonate100
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left:0
+    margin-top: 0
+    text: 100
+    tooltip: Donate 100 (Earn 1 Guild Point)
+    @onClick: donateKoeteGuild100()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  Panel
+    size: 20 20
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left:107
+    margin-top: 5
+    text: OR
+  UIButton
+    id: koeteGuildButtonDonate1000
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 140
+    margin-top: 0
+    text: 1000
+    tooltip: Donate 1000 (Earn 5 Guild Point)
+    @onClick: donateKoeteGuild1000()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  UIButton
+    id: koeteGuildButtonDonateCoin
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 71
+    margin-top: 40
+    text: 1 Koete Coin
+    tooltip: Donate 1 Koete Coin (+10k Guild Money, +20 Guild Points)
+    @onClick: donateKoeteGuildKC()
+    image-source: /images/Naruto/koetecoinsout
+    $hover:
+      image-source: /images/Naruto/koetecoinsin
+
+
+
+GuildManagement < MainWindow
+  id: guildManagementWindow
+  !text: tr('Management of Guild')
+  size: 300 257
+  anchors.right: koeteguildwindow.right
+  anchors.left: koeteguildwindow.left
+  anchors.top: koeteguildwindow.top
+  anchors.bottom: koeteguildwindow.bottom
+  margin-top: 0
+  margin-left: 266
+  margin-right: -300
+  margin-bottom: -30
+  phantom: true
+
+  UIButton
+    id: okInviteGuildButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 0
+    text: Invite
+    tooltip: Invite Player
+    @onClick: inviteMemberGuild()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: textEditInviteGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    image-source: /images/Naruto/koeteguild/text
+    size: 171 26
+    margin-top: 3
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: okKickGuildButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 40
+    text: Kick
+    tooltip: Kick Player
+    @onClick: kickMemberGuild()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: textEditKickGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    image-source: /images/Naruto/koeteguild/text
+    size: 171 26
+    margin-top: 43
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: okPromoteGuildButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 80
+    text: Promote
+    tooltip: Promote Player
+    @onClick: promoteMemberGuild()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: textEditPromoteGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    image-source: /images/Naruto/koeteguild/text
+    size: 171 26
+    margin-top: 83
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: okDemoteGuildButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 120
+    text: Demote
+    tooltip: Demote Player
+    @onClick: demoteMemberGuild()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: textEditDemoteGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    size: 171 26
+    margin-top: 123
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: okPassLeaderGuildButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 160
+    text: Pass Leader
+    tooltip: Pass the leadership to another Member
+    @onClick: passleaderMemberGuild()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: textEditPassLeaderGuild
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    size: 171 26
+    margin-top: 163
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: guildLeave
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 200
+    text: Leave
+    tooltip: Leave from the guild
+    @onClick: leaveMemberGuild()
+    image-source: /images/Naruto/koeteguild/leaveout
+    $hover:
+      image-source: /images/Naruto/koeteguild/leavein
+  UIButton
+    id: guildDisband
+    size: 94 31
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 0
+    margin-top: 200
+    text: Disband
+    tooltip: Disband your guild
+    @onClick: disbandMemberGuild()
+    image-source: /images/Naruto/koeteguild/disbandout
+    $hover:
+      image-source: /images/Naruto/koeteguild/disbandin
+
+GuildLimit < MainWindow
+  id: guildLimitWindow
+  !text: tr('Limit of players in your guild')
+  size: 300 257
+  anchors.right: koeteguildwindow.right
+  anchors.left: koeteguildwindow.left
+  anchors.top: koeteguildwindow.top
+  anchors.bottom: koeteguildwindow.bottom
+  margin-top: -150
+  margin-left: 0
+  margin-right: 0
+  margin-bottom: 257
+  phantom: true
+
+  UIButton
+    id: guildBuyLimitButton
+    size: 94 31
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 70
+    margin-bottom: 0
+    text: Buy
+    tooltip: Buys one more spot for a new player.
+    @onClick: buySpotGuild()
+    image-source: /images/Naruto/koeteguild/buylimitout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buylimitin
+
+  UIButton
+    id: LabelGuildLimit
+    text-align: center       
+    size: 89 34	
+    image-source: /images/Naruto/koeteguild/GuildStatus	
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right   
+    color: #0b91a3
+    tooltip: Your limit of members.
+    margin-bottom: 40
+    margin-right: 0
+  UIButton
+    id: LabelGuildTotal
+    text-align: center       
+    size: 89 34	
+    image-source: /images/Naruto/koeteguild/GuildStatus	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    color: #0ec934
+    tooltip: Your total of members.
+    margin-bottom: 40
+    margin-left: 0
+  Panel
+    id: PanelGuildTotal    
+    size: 58 11	
+    image-source: /images/Naruto/koeteguild/Line	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    margin-bottom: 50
+    margin-left: 88
+  UIButton
+    id: LabelGuildValueSpot
+    text-align: center       
+    size: 105 21	
+    tooltip: Price.
+    image-source: /images/Naruto/koeteguild/tabelaprice	
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left   
+    margin-bottom: 80
+    margin-left: 65
+
+GuildSlot < MainWindow
+  id: guildslotWindow
+  !text: tr('Your Guild Depot')
+  size: 300 257
+  anchors.right: koeteguildwindow.right
+  anchors.left: koeteguildwindow.left
+  anchors.top: koeteguildwindow.top
+  anchors.bottom: koeteguildwindow.bottom
+  margin-top: 0
+  margin-left: -290
+  margin-right: 266
+  margin-bottom: 0
+  phantom: true 
+
+  Panel
+    id: backbackslot
+    size: 289 92
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 110
+    margin-left: -14
+    image-source: /images/Naruto/koeteguild/backback
+
+  Panel
+    id: storestar
+    size: 162 24
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 80
+    margin-left: 0
+    image-source: /images/Naruto/koeteguild/storestar
+  Label
+    id: buystarLabel
+    size: 56 20
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 82
+    margin-right: 41
+    text: 10
+    text-align: center 
+    image-source: /images/Naruto/koeteguild/buystar
+  UIButton
+    id: storeStarBuy
+    size: 41 31
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 0
+    margin-top: 75
+    text: Buy
+    tooltip: Buy a new spot:
+    @onClick: buySlotGuildDepot()
+    image-source: /images/Naruto/koeteguild/okbuttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/okbuttonin
+  Panel
+    id: star1
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 12
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star2
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 22
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star3
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 32
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star4
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 42
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star5
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 52
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star6
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 62
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star7
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 72
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star8
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 82
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star9
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 92
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star10
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 102
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star11
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 112
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star12
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 122
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star13
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 132
+    image-source: /images/Naruto/koeteguild/starin
+  Panel
+    id: star14
+    size: 8 8
+    anchors.top: storestar.top
+    anchors.left: storestar.left
+    margin-top: 8
+    margin-left: 142
+    image-source: /images/Naruto/koeteguild/starin
+
+  UIButton
+    id: addItemGuildSlotButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 0
+    text: Add
+    tooltip: Add Item
+    @onClick: addGuildItem()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: addItemGuildSlotTextedit
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    size: 171 26
+    margin-top: 3
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+  UIButton
+    id: removeItemGuildSlotButton
+    size: 94 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 0
+    margin-top: 40
+    text: Remove
+    tooltip: Pass the leadership to another Member
+    @onClick: removeGuildItem()
+    image-source: /images/Naruto/koeteguild/buttonout
+    $hover:
+      image-source: /images/Naruto/koeteguild/buttonin
+  TextEdit
+    id: removeItemGuildSlotTextedit
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: white
+    size: 171 26
+    margin-top: 43
+    margin-left: 100
+    image-source: /images/Naruto/koeteguild/textout
+    $hover:
+      image-source: /images/Naruto/koeteguild/textin
+
+  Panel
+    id: slotpanel01
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: -5
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted01
+    size: 20 17
+    anchors.top: slotpanel01.top
+    anchors.left: slotpanel01.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel02
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 35
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted02
+    size: 20 17
+    anchors.top: slotpanel02.top
+    anchors.left: slotpanel02.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel03
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 75
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted03
+    size: 20 17
+    anchors.top: slotpanel03.top
+    anchors.left: slotpanel03.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel04
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 115
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted04
+    size: 20 17
+    anchors.top: slotpanel04.top
+    anchors.left: slotpanel04.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel05
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 155
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted05
+    size: 20 17
+    anchors.top: slotpanel05.top
+    anchors.left: slotpanel05.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel06
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 195
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted06
+    size: 20 17
+    anchors.top: slotpanel06.top
+    anchors.left: slotpanel06.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel07
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 235
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted07
+    size: 20 17
+    anchors.top: slotpanel07.top
+    anchors.left: slotpanel07.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel08
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: -5
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted08
+    size: 20 17
+    anchors.top: slotpanel08.top
+    anchors.left: slotpanel08.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel09
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 35
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted09
+    size: 20 17
+    anchors.top: slotpanel09.top
+    anchors.left: slotpanel09.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel10
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 75
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted10
+    size: 20 17
+    anchors.top: slotpanel10.top
+    anchors.left: slotpanel10.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel11
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 115
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted11
+    size: 20 17
+    anchors.top: slotpanel11.top
+    anchors.left: slotpanel11.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel12
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 155
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted12
+    size: 20 17
+    anchors.top: slotpanel12.top
+    anchors.left: slotpanel12.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel13
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 195
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted13
+    size: 20 17
+    anchors.top: slotpanel13.top
+    anchors.left: slotpanel13.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin
+
+  Panel
+    id: slotpanel14
+    size: 33 31
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 160
+    margin-left: 235
+    image-source: /images/Naruto/koeteguild/backslot
+  UIButton
+    id: itemSloted14
+    size: 20 17
+    anchors.top: slotpanel14.top
+    anchors.left: slotpanel14.left
+    margin-left: 7
+    margin-top: 8
+    image-source: /images/Naruto/koeteguild/itemslotout
+    $hover:
+      image-source: /images/Naruto/koeteguild/itemslotin

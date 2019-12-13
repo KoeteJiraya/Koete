@@ -1,0 +1,335 @@
+MainWindow
+  id: ninjaInfoWindow
+  height: 420
+  width: 340
+  image-source: /images/Naruto/bakcinfo
+  !text: tr(" ")
+  color: #fc4b4b
+  @onClose: modules.tutorial.onMainWindowClose()
+  
+
+  Panel
+    id: panelFace
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 150
+    width: 123
+    margin-left: 0
+    margin-top: 30
+  Panel
+    id: panelName
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 59
+    width: 174
+    margin-left: 80
+    margin-top: 0	
+  Panel
+    id: panelArea
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 193
+    width: 256
+    margin-left: 25
+    margin-top: 175	
+  Panel
+    id: panelArea2
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 111
+    width: 199
+    margin-left: 110
+    margin-top: 50
+  Label
+    id: lblName
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-align: center   
+    color: white
+    text: nobody
+    size: 140 25
+    margin-left: 92
+    margin-top: 15
+  UIButton
+    id: jutsuButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    !text: tr('Jutsus')
+    width: 90
+    margin-top: 184
+    margin-left: 32
+    @onClick: g_game.requestQuestLine(3)
+  UIButton
+    id: sagaButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 214
+    margin-left: 32
+    !text: tr('Saga')
+    width: 90
+    @onClick: modules.saga.onoffsaga()
+  UIButton
+    id: huntButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 244
+    margin-left: 32
+    !text: tr('Sensei')
+    width: 90
+    @onClick: modules.sensei.onoffsensei()
+  UIButton
+    id: questButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 274
+    margin-left: 32
+    !text: tr('Quest')
+    width: 90
+    @onClick: g_game.requestQuestLine(7)
+  UIButton
+    id: hachimonButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 304
+    margin-left: 32
+    !text: tr('Hachimon')
+    width: 90
+    @onClick: g_game.requestQuestLine(2)
+  UIButton
+    id: achievementsButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 334
+    margin-left: 32
+    !text: tr('Achievements')
+    width: 90
+    @onClick: modules.achievements.onoffachievements()
+  UIButton
+    id: kuchyoseButton
+    image-source: /images/Naruto/vippanelbuttonout
+    $hover:
+      image-source: /images/Naruto/vippanelbuttonin
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 184
+    margin-right: 34
+    !text: tr('Vip Panel')
+    width: 90
+    @onClick: modules.achievements.onoffvippanel()
+  UIButton
+    id: seloButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 214
+    margin-right: 34
+    !text: tr('Selo')
+    width: 90
+    @onClick: g_game.requestQuestLine(5)
+  UIButton
+    id: bijuuButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 244
+    margin-right: 34
+    !text: tr('Bijuu')
+    width: 90
+    @onClick: modules.bijuus.onoffbijuu()
+  UIButton
+    id: taijutsuButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 274
+    margin-right: 34
+    !text: tr('Taijutsu')
+    width: 90
+    @onClick: g_game.requestQuestLine(8)
+  UIButton
+    id: missaoButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 304
+    margin-right: 34
+    !text: tr('Characters')
+    width: 90
+    @onClick: modules.narutodex.onofftg()
+    
+  UIButton
+    id: bosesButton
+    image-source: /images/Naruto/ButtonOriginOut
+    $hover:
+      image-source: /images/Naruto/ButtonOriginIn
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 334
+    margin-right: 34
+    !text: tr('Bosses')
+    width: 90
+    @onClick: g_game.requestQuestLine(9)
+  UIButton
+    id: onoffButton
+    image-source: /images/Naruto/exit
+    size: 23 23
+    anchors.top: parent.top
+    anchors.right: parent.right
+    tooltip: Close
+    @onClick: onoff()
+    $hover:
+      image-source: /images/Naruto/exit1
+  Label
+    id: lblBalance
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Koete
+    margin-left: 120
+    margin-top: 125
+    color: #593803
+  Label
+    id: lblArenaPoints
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Arena: None
+    margin-left: 120
+    margin-top: 110
+    color: #593803
+  Label
+    id: lblPower
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Koete
+    margin-left: 120
+    margin-top: 95
+    color: #593803
+  Label
+    id: lblPartner
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Partner: None
+    margin-left: 120
+    margin-top: 80
+    color: #593803
+  Label
+    id: lblKill
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-auto-resize: true
+    text: Kills: None
+    margin-left: 120
+    margin-top: 65
+    color: #593803
+  UIButton
+    id: buttonVip
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 16 16
+    margin-left: 110
+    margin-top: 150
+  UIButton
+    id: panelRank
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 45
+    width: 45
+    margin-left: 220
+    margin-top: 70
+  Panel
+    id: panelVille
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 170
+    width: 420
+    margin-left: -50
+    margin-top: -130
+  UIButton
+    id: buttonKageOrAkatsuki
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 26 26
+    margin-left: 135
+    margin-top: 146
+  Panel
+    id: panelKageOrAkatsuki
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    height: 206
+    width: 80
+    margin-left: 112
+    margin-top: 169
+    image-source: /images/Naruto/medalbanner
+  UIButton
+    id: elemento01
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 32 32
+    margin-left: 135
+    margin-top: 200
+  UIButton
+    id: elemento02
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 32 32
+    margin-left: 135
+    margin-top: 240
+  UIButton
+    id: elemento03
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 32 32
+    margin-left: 135
+    margin-top: 280
+  UIButton
+    id: elemento04
+    anchors.top: parent.top     
+    anchors.left: parent.left  
+    size: 32 32
+    margin-left: 135
+    margin-top: 320
+  UIButton
+    id: flightButton
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    @onClick:  clickFly()
+    margin-left: 50
+    margin-top: 10
+  UIButton
+    id: dailygiftButton
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    @onClick:  clickDailyGift()
+    margin-left: 17
+    margin-top: 10

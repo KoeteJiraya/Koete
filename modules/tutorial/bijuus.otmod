@@ -1,0 +1,14 @@
+Module
+  name: bijuus
+  description: Pokedex de naruto
+  author: Koete
+  website: www.koete.com.br
+  version: 1.0
+  
+  autoload: true
+  autoload-priority: 1000
+  
+  
+  scripts: [ bijuus ]
+  @onLoad: init()
+  @onUnload: terminate()
