@@ -1,7 +1,7 @@
 
 EnterGame = { }
 
--- private variables var
+-- private variables var set
 local loadBox
 local enterGame
 local motdWindow
