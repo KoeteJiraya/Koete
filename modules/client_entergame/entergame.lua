@@ -9,7 +9,7 @@ local enterGameButton
 local clientBox
 local protocolLogin
 local motdEnabled = false
-local serverIP = '198.50.224.76'
+local serverIP = '35.247.206.170'
 
 
 
